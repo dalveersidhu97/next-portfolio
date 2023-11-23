@@ -14,7 +14,7 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
                     <TopBar></TopBar>
                     <div className='flex flex-col w-full h-full overflow-auto lg:relative'>
                         <MainNav></MainNav>
-                        <div className='flex-grow overflow-auto'>
+                        <div className='flex-grow overflow-y-auto overflow-x-hidden pb-20'>
                             {children}
                         </div>
                     </div>

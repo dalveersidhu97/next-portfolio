@@ -12,11 +12,11 @@ export default function EducationPage() {
         <h3 className="font-semibold text-lg">Education</h3>
         <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
           {MY_DATA.education.list.map((education, i) => <Fragment key={`education-${i}`}>
-            <div className="border rounded-md p-4 flex flex-col gap-2">
+            <div className="border border-grayNeutral rounded-md p-4 flex flex-col gap-2">
               <div>icon</div>
               <h4 className="font-semibold">{education.course}</h4>
               <div className="flex gap-2 flex-wrap text-sm">
-                {education.tags.map((tag, j) => <span key={`education-${i}-tag-${j}`} className="px-2 py-0.5 border rounded-full">{tag.label}</span>)}
+                {education.tags.map((tag, j) => <span key={`education-${i}-tag-${j}`} className="px-2 py-0.5 bg-grayLight rounded-full">{tag.label}</span>)}
               </div>
             </div>
           </Fragment>)}

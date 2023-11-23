@@ -10,9 +10,9 @@ export default function Home() {
       <div className="flex flex-col gap-4">
         <h3 className="font-semibold text-lg">What I am doing</h3>
         <div className="lg:grid lg:grid-cols-2 flex flex-col gap-4">
-          {MY_DATA.about.what_i_am_doing.map((item, i) => <div key={`doing-${i}`} className="border rounded-md p-2">
+          {MY_DATA.about.what_i_am_doing.map((item, i) => <div key={`doing-${i}`} className="border border-grayNeutral rounded-md p-4 flex flex-col gap-2">
             <div>{item.icon}</div>
-            <div>{item.title}</div>
+            <div className="font-semibold">{item.title}</div>
             <div>{item.desc}</div>
           </div>)}
         </div>
