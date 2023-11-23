@@ -1,0 +1,82 @@
+import useOnClickOutside from "@/hooks/useOnClickOutside";
+import Link from "next/link";
+import { Dispatch, Fragment, SetStateAction, useEffect, useRef } from "react";
+import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
+import { BsInfoSquareFill, BsStack } from 'react-icons/bs';
+import { FaInfo } from "react-icons/fa";
+import { IoMdSettings } from "react-icons/io";
+import { FaPerson } from "react-icons/fa6";
+import { GiStack } from "react-icons/gi";
+import { MdPermContactCalendar } from "react-icons/md";
+
+const navLinks = [
+    {
+        label: 'About',
+        path: '/',
+        Icon: MdPermContactCalendar
+    },
+    {
+        label: 'Skills',
+        path: '/skills',
+        Icon: IoMdSettings 
+    },
+    {
+        label: 'Experience',
+        path: '/experience',
+        Icon: GiStack 
+    },
+    {
+        label: 'Qualification',
+        path: '/qualification',
+        Icon: FaPerson 
+    }
+]
+
+const MainNav = () => {
+    const pathname = usePathname();
+    return (
+        <div className={`p-4 gap-4 text-lg text-primary hidden lg:flex`}>
+            {navLinks.map((navLink, i) => <Fragment key={`navLink-${i}`}>
+                <Link href={navLink.path} className={`${pathname === navLink.path ? `bg-primaryLight` : 'hover:bg-primaryLight'} focus:shadow-glow py-1 px-3 rounded-md flex gap-2 items-center`}>
+                    <navLink.Icon className="w-6 h-6"/>
+                    {navLink.label}
+                </Link>
+            </Fragment>)}
+        </div>
+    );
+}
+
+export const MainNavMobile = ({ visibilityState }: { visibilityState: [boolean, Dispatch<SetStateAction<boolean>>] }) => {
+    const [visible, setVisible] = visibilityState;
+    const pathname = usePathname();
+
+    const ref = useRef<HTMLDivElement>(null);
+    useOnClickOutside(ref, () => {
+        setVisible(false);
+    });
+    useEffect(() => {
+        setVisible(false);
+    }, [pathname]);
+
+    return (
+        <>
+            {/* backdrop */}
+            {visible && <div className={`lg:hidden absolute top-0 left-0 w-full h-full bg-[#00000055] z-[500]`}></div>}
+            <div 
+                ref={ref} 
+                className={`bg-white text-primary ${visible ? 'translate-x-0 shadow-[0px_-50px_500px_rgba(0,0,0,.25)]' : 'translate-x-full shadow-[0px_0px_0px_rgba(0,0,0,0)]'} z-[1000] flex items-start lg:hidden absolute top-0 right-0 transition-all duration-500 bg-white w-fit min-w-max max-w-[90%] h-full overflow-auto`}
+            >
+                <div className="flex flex-col gap-4 p-6 overflow-auto m-auto">
+                    {navLinks.map((navLink, i) => <Fragment key={`navLinkMobile-${i}`}>
+                        <Link href={navLink.path} className={`${pathname === navLink.path ? `bg-primaryLight` : 'hover:bg-primaryLight'} p-1 focus:shadow-glow py-2 px-4 rounded-md flex gap-2 items-center`}>
+                            <navLink.Icon className="w-6 h-6"/>
+                            {navLink.label}
+                        </Link>
+                    </Fragment>)}
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default MainNav;
