@@ -32,7 +32,7 @@ const TopBar = () => {
                     {colorScheme==='light' && <div role="button" onClick={() => setColorScheme('dark')} className={`dark:hover:text-grayDark hover:bg-primaryLight p-2 rounded-md flex items-center gap-2`}>
                         <MdLightMode className="w-6 h-6 text-[#eeaa00]" />
                     </div>}
-                    {colorScheme==='auto' && <div role="button" onClick={() => setColorScheme('light')} className={`dark:hover:text-grayDark text-foregroundLight hover:text-primary hover:bg-primaryLight p-2 rounded-md flex items-center gap-2`}>
+                    {(colorScheme==='auto' || !colorScheme) && <div role="button" onClick={() => setColorScheme('light')} className={`dark:hover:text-grayDark text-foregroundLight hover:text-primary hover:bg-primaryLight p-2 rounded-md flex items-center gap-2`}>
                         <MdHdrAuto className="w-6 h-6" />
                     </div>}
                 </div>
