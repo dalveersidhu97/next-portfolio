@@ -3,13 +3,12 @@ import useOnClickOutside from "@/hooks/useOnClickOutside";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, SetStateAction, Dispatch } from "react";
-import { MdDownload, MdEmail } from 'react-icons/md';
 import { IoMdCloudDownload, IoMdMail } from 'react-icons/io';
 import { FaLocationDot, FaSquarePhone } from 'react-icons/fa6'
 
 const SideBar = () => {
     return (
-        <div className='flex flex-col h-full bg-primaryLight'>
+        <div className='flex flex-col h-full bg-primaryLight dark:bg-primaryLight2'>
             <div className='p-4 text-center flex flex-col gap-2'>
                 <div className='w-36 aspect-square m-auto rounded-full relative overflow-hidden shadow-md'>
                     <Image fill alt="Dalveer Singh" src={MY_DATA.avatar}></Image>
@@ -17,24 +16,24 @@ const SideBar = () => {
                 <h1 className='text-2xl font-[500]'>Dalveer Singh</h1>
             </div>
             <div className='px-4 pb-4 flex flex-col gap-4 flex-grow'>
-                <div className='bg-primaryLight2 px-2 py-1 rounded-md text-center'>
+                <div className='bg-primaryLight2 dark:bg-primaryLight px-2 py-1 rounded-md text-center'>
                     {MY_DATA.role}
                 </div>
-                <button className='hover:opacity-70 px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 focus:shadow-glow bg-primary text-white'>
+                <button className='hover:opacity-70 px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 box-shadow-glow bg-primary text-white dark:text-foregroundDark'>
                     <IoMdCloudDownload className="w-5 h-5"/>
                     Download Resume
                 </button>
                 {/* Contact */}
-                <div className='text-primary flex flex-col gap-1 bg-primaryLight2 p-2 rounded-md'>
-                    <div className="flex items-center gap-1">
+                <div className='text-primary dark:text-foregroundDark flex flex-col gap-1 bg-primaryLight2 dark:bg-primaryLight p-2 rounded-md'>
+                    <div className="flex items-center gap-2">
                         <IoMdMail className="w-5 h-5"/>
                         {MY_DATA.contact.email}
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-2">
                         <FaSquarePhone  className="w-5 h-5"/>
                         {MY_DATA.contact.phone}
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-2">
                         <FaLocationDot className="w-5 h-5"/>
                         {MY_DATA.contact.address}
                     </div>
@@ -45,7 +44,7 @@ const SideBar = () => {
                         href={url}
                         target="_blank"
                         key={`social-${i}`}
-                        className='flex flex-col items-center text-primary rounded-md py-1 px-2'
+                        className='flex flex-col items-center text-primary dark:text-foregroundDark rounded-md py-1 px-2'
                     >
                         {<Icon className="w-8 h-8" />}
                         {label}
@@ -75,7 +74,7 @@ export const SideBarMobile = ({ visibilityState }: { visibilityState: [boolean, 
 
 export const SideBarPC = () => {
     return (
-        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-lg overflow-auto shadow-[0px_0px_5px_rgba(0,0,0,.2)]'>
+        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-lg overflow-auto shadow-[0px_0px_5px_rgba(0,0,0,.2)] dark:shadow-[0px_0px_5px_rgba(255,255,255,.8)]'>
             <SideBar></SideBar>
         </div>
     );

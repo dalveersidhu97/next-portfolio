@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       boxShadow: {
-        glow: "0 0 5px var(--primary)"
+        glow: "0 0 0 .2rem var(--primary-shadow)",
+        zero: "0 0 0 0 var(--transparent)",
       },
       fontWeight: {
         semibold: '500'
@@ -18,6 +19,7 @@ const config: Config = {
     },
     colors: {
       white: "var(--white)",
+      black: "var(--black)",
       primary: "var(--primary)",
       primaryLight: "var(--primaryLight)",
       primaryLight2: "var(--primaryLight2)",
@@ -26,9 +28,12 @@ const config: Config = {
       grayDark: "var(--grayDark)",
       secondary: "var(--secondary)",
       accent: "var(--accent)",
-      transparent: "var(--transparent)"
+      transparent: "var(--transparent)",
+      foregroundLight: "var(--foregroundLight)",
+      foregroundDark: "var(--foregroundDark)",
     }
   },
   plugins: [],
+  darkMode: 'class',
 }
 export default config

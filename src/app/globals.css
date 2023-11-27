@@ -20,6 +20,10 @@
     scrollbar-width: none;
     /* Firefox */
   }
+  
+  .box-shadow-glow {
+    @apply transition-all shadow-zero focus:shadow-glow;
+  };
 }
 
 @tailwind components;
@@ -28,13 +32,29 @@
 
 :root {
   --white: #ffffff;
+  --black: #000000;
   --primary: #0284c7;
+  --primary-shadow: #0284c799;
   --primaryLight: #eff6ff;
   --primaryLight2: #d9e9ff;
   --grayLight: #fafafa;
-  --grayNeutral: #cfcfcf;
+  --grayNeutral: #dfdfdf;
   --grayDark: #52525b;
   --secondary: #0284c7;
   --accent: #00915B;
   --transparent: #00000000;
+  --foregroundLight: #ffffff;
+  --foregroundDark: #000000;
+}
+
+:root .dark {
+  --primary: #000;
+  --primary-shadow: #ccc;
+  --primaryLight: #666;
+  --primaryLight2: #444;
+  --grayLight: #555;
+  --grayNeutral: #dfdfdf;
+  --grayDark: #dfdfdf;
+  --foregroundLight: #111111;
+  --foregroundDark: #ddd;
 }
