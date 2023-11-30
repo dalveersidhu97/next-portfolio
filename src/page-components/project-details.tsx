@@ -12,10 +12,10 @@ export const ProjectDetails = ({withBackButton}: { withBackButton?: boolean }) =
     const project = MY_DATA.experience.projects.list.find(p => p.slug === params.projectSlug);
     if (!project) return <div>Not found</div>
     return <>
-        <div className="bg-white rounded-md flex flex-col gap-4 p-4">
+        <div className="bg-foregroundLight rounded-md flex flex-col gap-4 p-4">
             <div className="flex gap-2 justify-between items-start">
                 <h2 className="text-xl lg:text-2xl font-semibold">{project.project_name}</h2>
-                {withBackButton && <button className="ml-auto focus:text-primary border hover:border-primary focus:border-transparent focus:shadow-glow p-1 rounded-lg overflow-hidden" onClick={()=>router.back()}>
+                {withBackButton && <button className="ml-auto focus:text-primary dark:focus:text-[inherit] border hover:border-primary dark:hover:border-foregroundDark focus:border-transparent dark:focus:border-transparent focus:shadow-glow p-1 rounded-lg overflow-hidden" onClick={()=>router.back()}>
                     <IoMdClose className="w-6 h-6 lg:w-7 lg:h-7"/>
                 </button>}
             </div>

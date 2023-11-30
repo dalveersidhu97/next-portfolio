@@ -36,7 +36,7 @@ export default function ExperiencePage() {
         <p>{MY_DATA.experience.projects.summary}</p>
         <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
           {MY_DATA.experience.projects.list.map((project, i) => <Fragment key={`project-${i}`}>
-            <Link href={`/experience/${project.slug}`} className="hover:shadow-md border border-grayNeutral active:scale-95 hover:scale-105 transition-all rounded-md p-4 flex flex-col gap-2" role="button">
+            <Link href={`/experience/${project.slug}`} className="hover:shadow-md border border-grayNeutral hover:border-foregroundDark transition-all rounded-md p-4 flex flex-col gap-2" role="button">
               <ImagesFrame images={project.images}></ImagesFrame>
               <h4 className="font-semibold">{project.project_name}</h4>
               <div className="flex gap-2 flex-wrap text-sm">

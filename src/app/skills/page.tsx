@@ -13,9 +13,9 @@ export default function SkillsPage() {
             <h3 className="font-semibold text-lg">{skillset.set_name}</h3>
             <div className="flex flex-col gap-2">
               {skillset.skills.map((skills, j) => <Fragment key={`set-${i}-skill-${j}`}>
-                <div className=" bg-grayLight border border-grayNeutral py-2 px-4 rounded-md flex items-start justify-between">
+                <div className=" bg-grayLight py-2 px-4 rounded-md flex items-start justify-between">
                   <span>{skills.skill_name}</span>
-                  <span className={`${skills.level==='Expert'?'bg-[#6a6]':skills.level==='Intermediate'?'bg-[#66a]':'bg-[#888]'} py-0.5 px-1.5 text-white text-xs rounded-md`}>{skills.level}</span>
+                  <span className={`${skills.level==='Expert'?'bg-[#6a67]':skills.level==='Intermediate'?'bg-[#66a7]':'bg-[#8887]'} py-0.5 px-1.5 text-white text-xs rounded-md`}>{skills.level}</span>
                 </div>
               </Fragment>)}
             </div>
