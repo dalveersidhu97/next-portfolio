@@ -11,7 +11,7 @@ const SideBar = () => {
         <div className='flex flex-col h-full bg-primaryLight dark:bg-primaryLight2'>
             <div className='p-4 text-center flex flex-col gap-2'>
                 <div className='w-36 aspect-square m-auto rounded-full relative overflow-hidden shadow-md'>
-                    <Image fill alt="Dalveer Singh" src={MY_DATA.avatar}></Image>
+                    <Image fill alt="Dalveer Singh" sizes="50vw" src={MY_DATA.avatar}></Image>
                 </div>
                 <h1 className='text-2xl font-[500]'>Dalveer Singh</h1>
             </div>

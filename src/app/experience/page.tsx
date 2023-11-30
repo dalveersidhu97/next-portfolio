@@ -8,14 +8,14 @@ export default function ExperiencePage() {
   return (
     <div className="flex flex-col gap-4 p-4">
       <div className="flex flex-col gap-4">
-        <h3 className="font-semibold text-lg">Work history</h3>
+        <h2 className="font-semibold text-lg">Work history</h2>
         <p>{MY_DATA.experience.work.summary}</p>
         <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
           {MY_DATA.experience.work.work_history.map((work, i) => <Fragment key={`work-${i}`}>
             <div className="border border-grayNeutral rounded-md p-4 gap-2 flex flex-col">
               <div>{work.icon}</div>
               <div className="flex items-center gap-1 flex-wrap">
-                <h4 className="font-semibold">{work.job_title}</h4>
+                <h3 className="font-semibold">{work.job_title}</h3>
                 <span>{work.subLabel}</span>
               </div>
               <div className="flex gap-1 flex-wrap">
@@ -32,13 +32,13 @@ export default function ExperiencePage() {
       </div>
 
       <div className="flex flex-col gap-4">
-        <h3 className="font-semibold text-lg">Personal Projects</h3>
+        <h2 className="font-semibold text-lg">Personal Projects</h2>
         <p>{MY_DATA.experience.projects.summary}</p>
         <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
           {MY_DATA.experience.projects.list.map((project, i) => <Fragment key={`project-${i}`}>
             <Link href={`/experience/${project.slug}`} className="hover:shadow-md border border-grayNeutral hover:border-foregroundDark transition-all rounded-md p-4 flex flex-col gap-2" role="button">
               <ImagesFrame images={project.images}></ImagesFrame>
-              <h4 className="font-semibold">{project.project_name}</h4>
+              <h3 className="font-semibold">{project.project_name}</h3>
               <div className="flex gap-2 flex-wrap text-sm">
                 {project.tags.map((tag, j) => <span key={`project-${i}-tag-${j}`} className="px-2 py-0.5 border rounded-full">{tag}</span>)}
               </div>
