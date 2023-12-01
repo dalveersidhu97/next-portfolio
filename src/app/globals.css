@@ -28,19 +28,19 @@
     box-shadow: rgba(var(--shadow-rgb), .3) 0px 0px 3px, rgba(var(--shadow-rgb), 0.2) 0px 0px 6px;
   }
   .page {
-    @apply flex flex-col gap-8 p-6;
+    @apply flex flex-col gap-8 p-4 lg:p-6;
   }
   .page-section {
-    @apply flex flex-col gap-6;
+    @apply flex flex-col gap-4 lg:gap-6;
   }
   .card-group {
-    @apply flex flex-col gap-6 lg:grid lg:grid-cols-2
+    @apply flex flex-col gap-6 lg:grid lg:grid-cols-2;
   }
   .card {
     @apply border border-grayNeutral rounded-lg p-4 flex flex-col gap-2;
   }
   h2 {
-    @apply font-semibold text-xl
+    @apply font-semibold text-xl;
   }
 
   h3 {

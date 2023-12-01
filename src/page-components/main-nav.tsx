@@ -8,6 +8,7 @@ import { FaPerson } from "react-icons/fa6";
 import { GiStack } from "react-icons/gi";
 import { MdPermContactCalendar } from "react-icons/md";
 import { LightModes } from "./light-modes";
+import { BackDrop } from "@/compnents/backdrop";
 
 
 const navLinks = [
@@ -65,7 +66,7 @@ export const MainNavMobile = ({ visibilityState }: { visibilityState: [boolean, 
     return (
         <>
             {/* backdrop */}
-            {visible && <div className={`lg:hidden absolute top-0 left-0 w-full h-full bg-[#00000055] z-[500]`}></div>}
+            {visible && <BackDrop />}
             <div
                 ref={ref}
                 className={`bg-white dark:bg-primaryLight2 dark:text-foregroundDark text-primary ${visible ? 'translate-x-0 shadow-[0px_-50px_500px_rgba(0,0,0,.25)]' : 'translate-x-full shadow-[0px_0px_0px_rgba(0,0,0,0)]'} z-[1000] flex items-start lg:hidden absolute top-0 right-0 transition-all duration-500 w-fit min-w-max max-w-[90%] h-full overflow-auto`}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef, SetStateAction, Dispatch } from "react";
 import { IoMdCloudDownload, IoMdMail } from 'react-icons/io';
 import { FaLocationDot, FaSquarePhone } from 'react-icons/fa6'
+import { BackDrop } from "@/compnents/backdrop";
 
 const SideBar = () => {
     return (
@@ -64,7 +65,7 @@ export const SideBarMobile = ({ visibilityState }: { visibilityState: [boolean, 
     return (
         <>
             {/* backdrop */}
-            {visible && <div className={`lg:hidden absolute top-0 left-0 w-full h-full bg-[#00000055] z-[500]`}></div>}
+            {visible && <BackDrop />}
             <div ref={ref} className={`bg-primaryLight ${visible ? 'translate-x-0 shadow-[0px_50px_500px_rgba(0,0,0,.25)]' : '-translate-x-full shadow-[0px_0px_0px_rgba(0,0,0,0)]'} z-[1000] block lg:hidden absolute top-0 left-0 transition-all duration-500 w-fit min-w-max max-w-[90%] h-full overflow-auto`}>
                 <SideBar></SideBar>
             </div>
