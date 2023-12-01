@@ -4,10 +4,12 @@ import './globals.css'
 import MainLayout from '@/page-components/main-layout';
 import { CookiesProvider, getCookies } from 'next-client-cookies/server';
 import { MY_DATA } from '@/db/data';
+import { BASE_URL } from '@/constants/general-contants';
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: ['400', '300', '500', '600', '700'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     template: `%s | ${MY_DATA.name}`,
     default: `${MY_DATA.name} | Full Stack Web Developer`,
