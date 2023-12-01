@@ -10,32 +10,32 @@ const SideBar = () => {
     return (
         <div className='flex flex-col h-full bg-primaryLight dark:bg-primaryLight2'>
             <div className='p-4 text-center flex flex-col gap-2'>
-                <div className='w-36 aspect-square m-auto rounded-full relative overflow-hidden shadow-md'>
+                <div className='w-36 aspect-square m-auto rounded-full relative overflow-hidden shadow-md border-2 border-foregroundLight dark:border-primaryLight'>
                     <Image fill alt="Dalveer Singh" sizes="50vw" src={MY_DATA.avatar}></Image>
                 </div>
-                <h1 className='text-2xl font-[500]'>Dalveer Singh</h1>
+                <h1 className='text-2xl font-semibold'>Dalveer Singh</h1>
             </div>
             <div className='px-4 pb-4 flex flex-col gap-4 flex-grow'>
                 <div className='bg-primaryLight2 dark:bg-primaryLight px-2 py-1 rounded-md text-center'>
                     {MY_DATA.role}
                 </div>
-                <button className='hover:opacity-75 px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 box-shadow-glow bg-primaryLight2 dark:bg-primaryLight text-primary dark:text-foregroundDark'>
+                <a href={`${MY_DATA.resume_link}`} target="_blank" className='px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 box-shadow-glow bg-primaryLight2 dark:bg-primaryLight text-primary dark:text-foregroundDark'>
                     <IoMdCloudDownload className="w-5 h-5"/>
                     Download Resume
-                </button>
+                </a>
                 {/* Contact */}
-                <div className='text-primary dark:text-foregroundDark flex flex-col gap-1 bg-primaryLight2 dark:bg-primaryLight p-2 rounded-md'>
-                    <div className="flex items-center gap-2">
+                <div className='text-primary dark:text-foregroundDark flex flex-col gap-2 bg-primaryLight2 dark:bg-primaryLight p-2 rounded-md'>
+                    <div className="flex items-center gap-2 hover:opacity-75">
                         <IoMdMail className="w-5 h-5"/>
-                        {MY_DATA.contact.email}
+                        <a href = {`mailto: ${MY_DATA.contact.email}`}>{MY_DATA.contact.email}</a>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 hover:opacity-75">
                         <FaSquarePhone  className="w-5 h-5"/>
-                        {MY_DATA.contact.phone}
+                        <a href={`tel:${MY_DATA.contact.phone}`}>{MY_DATA.contact.phone}</a>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 hover:opacity-75">
                         <FaLocationDot className="w-5 h-5"/>
-                        {MY_DATA.contact.address}
+                        <address>{MY_DATA.contact.address}</address>
                     </div>
                 </div>
                 {/* Social */}
@@ -44,7 +44,7 @@ const SideBar = () => {
                         href={url}
                         target="_blank"
                         key={`social-${i}`}
-                        className='flex flex-col items-center text-primary dark:text-foregroundDark rounded-md py-1 px-2'
+                        className='flex flex-col items-center text-primary dark:text-foregroundDark rounded-md p-2 box-shadow-glow'
                     >
                         {<Icon className="w-8 h-8" />}
                         {label}
@@ -74,7 +74,7 @@ export const SideBarMobile = ({ visibilityState }: { visibilityState: [boolean, 
 
 export const SideBarPC = () => {
     return (
-        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-lg overflow-auto shadow-card'>
+        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-xl overflow-auto shadow-card'>
             <SideBar></SideBar>
         </div>
     );

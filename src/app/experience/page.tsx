@@ -6,16 +6,16 @@ import Link from "next/link";
 export default function ExperiencePage() {
 
   return (
-    <div className="flex flex-col gap-4 p-4">
-      <div className="flex flex-col gap-4">
-        <h2 className="font-semibold text-lg">Work history</h2>
+    <div className="page">
+      <div className="page-section">
+        <h2>Work history</h2>
         <p>{MY_DATA.experience.work.summary}</p>
-        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+        <div className="card-group">
           {MY_DATA.experience.work.work_history.map((work, i) => <Fragment key={`work-${i}`}>
-            <div className="border border-grayNeutral rounded-md p-4 gap-2 flex flex-col">
-              <div>{work.icon}</div>
+            <div className="card">
+              <div><work.icon className="w-6 h-6" /></div>
               <div className="flex items-center gap-1 flex-wrap">
-                <h3 className="font-semibold">{work.job_title}</h3>
+                <h3>{work.job_title}</h3>
                 <span>{work.subLabel}</span>
               </div>
               <div className="flex gap-1 flex-wrap">
@@ -31,16 +31,16 @@ export default function ExperiencePage() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-4">
-        <h2 className="font-semibold text-lg">Personal Projects</h2>
+      <div className="page-section">
+        <h2>Personal Projects</h2>
         <p>{MY_DATA.experience.projects.summary}</p>
-        <div className="flex flex-col gap-4 lg:grid lg:grid-cols-2">
+        <div className="card-group">
           {MY_DATA.experience.projects.list.map((project, i) => <Fragment key={`project-${i}`}>
-            <Link href={`/experience/${project.slug}`} className="hover:shadow-md border border-grayNeutral hover:border-foregroundDark transition-all rounded-md p-4 flex flex-col gap-2" role="button">
+            <Link href={`/experience/${project.slug}`} className="card !border-none transition-all duration-200 shadow-card hover:shadow-glow" role="button">
               <ImagesFrame images={project.images}></ImagesFrame>
-              <h3 className="font-semibold">{project.project_name}</h3>
+              <h3>{project.project_name}</h3>
               <div className="flex gap-2 flex-wrap text-sm">
-                {project.tags.map((tag, j) => <span key={`project-${i}-tag-${j}`} className="px-2 py-0.5 border rounded-full">{tag}</span>)}
+                {project.tags.map((tag, j) => <span key={`project-${i}-tag-${j}`} className="px-2 py-0.5 bg-grayLight rounded-full">{tag}</span>)}
               </div>
             </Link>
           </Fragment>)}

@@ -1,7 +1,6 @@
+import { BASE_URL } from '@/constants/general-contants';
 import { MY_DATA } from '@/db/data';
 import { MetadataRoute } from 'next'
-
-const BASE = 'https://dalveersidhu.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
@@ -15,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ];
 
     return paths.map(path => ({
-        url: `${BASE}${path.path}`,
+        url: `${BASE_URL}${path.path}`,
         lastModified: new Date(),
         changeFrequency: 'daily',
         priority: path.priority,

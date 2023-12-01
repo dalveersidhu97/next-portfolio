@@ -6,24 +6,69 @@
   }
 }
 
-@layer components {
+@layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
 
   .box-shadow-glow {
-    @apply transition-all shadow-zero focus:shadow-glow;
+    @apply transition-all shadow-zero duration-200 hover:shadow-glow focus:shadow-glow;
   }
-  
+
   .shadow-card {
-    box-shadow: rgba(var(--shadow-rgb), 0.15) 0px 0px 2px, rgba(var(--shadow-rgb), 0.08) 0px 0px 6px;
+    box-shadow: rgba(var(--shadow-rgb), 0.15) 0px 0px 3px, rgba(var(--shadow-rgb), 0.08) 0px 0px 6px;
   }
+
   .dark .shadow-card {
-    box-shadow: rgba(var(--shadow-rgb), .3) 0px 0px 2px, rgba(var(--shadow-rgb), 0.2) 0px 0px 6px;
+    box-shadow: rgba(var(--shadow-rgb), .3) 0px 0px 3px, rgba(var(--shadow-rgb), 0.2) 0px 0px 6px;
+  }
+  .page {
+    @apply flex flex-col gap-8 p-6;
+  }
+  .page-section {
+    @apply flex flex-col gap-6;
+  }
+  .card-group {
+    @apply flex flex-col gap-6 lg:grid lg:grid-cols-2
+  }
+  .card {
+    @apply border border-grayNeutral rounded-lg p-4 flex flex-col gap-2;
+  }
+  h2 {
+    @apply font-semibold text-xl
+  }
+
+  h3 {
+    @apply font-semibold text-lg;
+  }
+
+  h4 {
+    @apply font-semibold
+  }
+
+
+  @keyframes opacityIn {
+    from {
+      @apply opacity-0;
+    }
+    to {
+      @apply opacity-100;
+    }
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(1.5rem);
+      @apply opacity-0;
+    }
+    to {
+      transform: translateY(0);
+      @apply opacity-100;
+    }
   }
 }
 
@@ -39,14 +84,14 @@
   --primaryLight: #eff6ff;
   --primaryLight2: #d9e9ff;
   --grayLight: #f6f6f6;
-  --grayNeutral: #dfdfdf;
+  --grayNeutral: #cfcfcf;
   --grayDark: #52525b;
   --secondary: #0284c7;
   --accent: #00915B;
   --transparent: #00000000;
   --foregroundLight: #ffffff;
-  --foregroundDark: #454545;
-  --shadow-rgb: 0,0,0;
+  --foregroundDark: #555;
+  --shadow-rgb: 0, 0, 0;
 }
 
 :root .dark {
@@ -55,36 +100,47 @@
   --primaryLight: #666;
   --primaryLight2: #444;
   --grayLight: #555;
-  --grayNeutral: #404040;
+  --grayNeutral: #304040;
   --grayDark: #dfdfdf;
   --foregroundLight: #111111;
   --foregroundDark: #ddd;
-  --shadow-rgb: 255,255,255;
+  --shadow-rgb: 255, 255, 255;
+}
+
+body.dark img {
+  filter: brightness(80%);
 }
 
 /* For Webkit browsers (Chrome, Safari, etc.) */
 body.dark ::-webkit-scrollbar {
-  width: auto; /* Width of the scrollbar */
+  width: auto;
+  /* Width of the scrollbar */
 }
-body.dark *{
+
+body.dark * {
   scrollbar-width: thin;
 }
 
 body.dark ::-webkit-scrollbar-thumb {
-  background-color: #333; /* Color of the thumb (the draggable part) */
+  background-color: #333;
+  /* Color of the thumb (the draggable part) */
 }
 
 body.dark ::-webkit-scrollbar-track {
-  background-color: #555; /* Color of the track (the non-draggable part) */
+  background-color: #555;
+  /* Color of the track (the non-draggable part) */
 }
 
 /* For Firefox */
-body.dark *{
-  scrollbar-color: #333 #555; /* thumb and track colors */
+body.dark * {
+  scrollbar-color: #333 #555;
+  /* thumb and track colors */
 }
 
 /* For IE/Edge */
 body.dark * {
-  scrollbar-face-color: #333; /* Color of the thumb */
-  scrollbar-track-color: #555; /* Color of the track */
+  scrollbar-face-color: #333;
+  /* Color of the thumb */
+  scrollbar-track-color: #555;
+  /* Color of the track */
 }

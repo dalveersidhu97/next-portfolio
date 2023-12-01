@@ -1,11 +1,14 @@
 
-import { FaFacebookSquare, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
+import { FaFacebookSquare, FaGithubSquare, FaGraduationCap, FaHtml5, FaLinkedin } from 'react-icons/fa';
+import { CgWebsite } from 'react-icons/cg';
+import { VscJson } from 'react-icons/vsc'
+import { BASE_URL } from '@/constants/general-contants';
 
 export const MY_DATA = {
     name: 'Dalveer Singh',
     avatar: '/images/me.jpeg',
     role: 'Full Stack Web Developer',
-    resume_link: 'https://www.dalveersidhu.com/resume/MyResume.pdf',
+    resume_link: `${BASE_URL}/resume/resume.pdf`,
     contact: {
         email: 'dalveersidhu97@gmail.com',
         phone: '+19029880900',
@@ -22,17 +25,17 @@ export const MY_DATA = {
             {
                 title: 'Fullstack Web development',
                 desc: 'Single or Multipage fullstack websites using Node.js, Express.js, Next.js, React.js, Core PHP, Spring MVC, SQL or NoSQL databases etc.',
-                icon: ''
+                icon: CgWebsite
             },
             {
                 title: 'Front End Web Development',
                 desc: 'I can build responsive front end websites using HTML, CSS, JS, React.js, JQery etc.',
-                icon: ''
+                icon: FaHtml5
             },
             {
                 title: 'API Development',
                 desc: 'I can make APIs using Node.js, Next.js, Core PHP, MongoDB, Mongoose, SQL, Web Tokesn etc.',
-                icon: ''
+                icon: VscJson
             },
         ]
     },
@@ -84,7 +87,7 @@ export const MY_DATA = {
                 { skill_name: 'SQL Server', level: 'Expert' },
                 { skill_name: 'MongoDB', level: 'Expert' },
                 { skill_name: 'Mongoose (ORM)', level: 'Intermediate' },
-                { skill_name: 'Sequelize (ORM)', level: 'Expert'}
+                { skill_name: 'Sequelize (ORM)', level: 'Expert' }
             ]
         },
         {
@@ -95,9 +98,9 @@ export const MY_DATA = {
                 { skill_name: 'REST APIs', level: 'Expert' },
                 { skill_name: 'MVC Architecture', level: 'Expert' },
                 { skill_name: 'Test Driven Development (TDD)', level: 'Intermediate' },
-                { skill_name: 'Unit Testing', level: 'Expert'},
-                { skill_name: 'Agile methodologies, JIRA', level: 'Expert'},
-                { skill_name: 'Chrome Extensions Development', level: 'Intermediate'}
+                { skill_name: 'Unit Testing', level: 'Expert' },
+                { skill_name: 'Agile methodologies, JIRA', level: 'Expert' },
+                { skill_name: 'Chrome Extensions Development', level: 'Intermediate' }
             ]
         }
     ],
@@ -106,7 +109,7 @@ export const MY_DATA = {
             summary: 'With 1 year of experience as a fullstack Nodejs/Typescript developer.',
             work_history: [
                 {
-                    icon: '',
+                    icon: CgWebsite,
                     job_title: 'Full Stack Developer',
                     subLabel: '(Full Time 7 Months)',
                     company: 'New World Inc',
@@ -117,7 +120,7 @@ export const MY_DATA = {
                     ]
                 },
                 {
-                    icon: '',
+                    icon: FaHtml5,
                     job_title: 'Web Developer',
                     subLabel: '(Intern 4 Months)',
                     company: 'Infowiz',
@@ -166,32 +169,44 @@ export const MY_DATA = {
         summary: 'Web developer with ability to learn and collaborate in rapidly changing evironments and compositions. Worked through 1000+ hours of bootcamp structure, learning Javascript, Node.js, React.js, Next.js, Typescript and many more. Eager to tackle web development/design challenges to achieve lasting impact on user experience.',
         list: [
             {
-                icon: '',
+                icon: FaGraduationCap,
                 course: 'Computer Software and Database Development',
-                tags: [
-                    { icon: '', label: 'Post Graduate Diploma' },
-                    { icon: '', label: 'Lambton College' },
-                    { icon: '', label: 'Toronto Campus' },
-                    { icon: '', label: 'GPA 3.6' },
-                    { icon: '', label: '2 years' },
-                    { icon: '', label: 'May 2020' },
-                    { icon: '', label: 'to' },
-                    { icon: '', label: 'May 2022' },
+                tagGroups: [
+                    [
+                        { icon: '', label: 'Post Graduate Diploma' },
+                        { icon: '', label: 'Lambton College' },
+                    ],
+                    [
+                        { icon: '', label: 'Toronto Campus' },
+                        { icon: '', label: 'GPA 3.6' },
+                        { icon: '', label: '2 years' },
+                    ],
+                    [
+                        { icon: '', label: 'May 2020' },
+                        { icon: '', label: 'to' },
+                        { icon: '', label: 'May 2022' },
+                    ]
                 ]
             },
             {
-                icon: '',
+                icon: FaGraduationCap,
                 course: 'Bachelor of Computer Application',
-                tags: [
-                    { icon: '', label: 'Bachelors\'s Degree' },
-                    { icon: '', label: 'Punjaib University' },
-                    { icon: '', label: 'Patiala Campus' },
-                    { icon: '', label: 'GPA 3.0' },
-                    { icon: '', label: '3 years' },
-                    { icon: '', label: 'May 2016' },
-                    { icon: '', label: 'to' },
-                    { icon: '', label: 'May 2019' },
-                ]
+                tagGroups: [
+                    [
+                        { icon: '', label: 'Bachelors\'s Degree' },
+                        { icon: '', label: 'Punjaib University' },
+                    ],
+                    [
+                        { icon: '', label: 'Patiala Campus' },
+                        { icon: '', label: 'GPA 3.0' },
+                        { icon: '', label: '3 years' },
+                    ],
+                    [
+                        { icon: '', label: 'May 2016' },
+                        { icon: '', label: 'to' },
+                        { icon: '', label: 'May 2019' },
+                    ]
+                ],
             }
         ]
     }

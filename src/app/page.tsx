@@ -2,17 +2,17 @@ import { MY_DATA } from "@/db/data";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-4 p-4">
-      <div className="flex flex-col gap-4">
-        <h3 className="font-semibold text-lg">About Me</h3>
+    <div className="page">
+      <div className="page-section">
+        <h2>About Me</h2>
         <p>{MY_DATA.about.about_me}</p>
       </div>
-      <div className="flex flex-col gap-4">
-        <h3 className="font-semibold text-lg">What I am doing</h3>
-        <div className="lg:grid lg:grid-cols-2 flex flex-col gap-4">
-          {MY_DATA.about.what_i_am_doing.map((item, i) => <div key={`doing-${i}`} className="border border-grayNeutral rounded-md p-4 flex flex-col gap-2">
-            <div>{item.icon}</div>
-            <div className="font-semibold">{item.title}</div>
+      <div className="page-section">
+        <h2>What I am doing</h2>
+        <div className="card-group">
+          {MY_DATA.about.what_i_am_doing.map((item, i) => <div key={`doing-${i}`} className="card">
+            <div><item.icon className="w-6 h-6" /></div>
+            <h3>{item.title}</h3>
             <div>{item.desc}</div>
           </div>)}
         </div>

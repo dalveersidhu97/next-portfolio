@@ -12,10 +12,10 @@ export const ProjectDetails = ({withBackButton}: { withBackButton?: boolean }) =
     const project = MY_DATA.experience.projects.list.find(p => p.slug === params.projectSlug);
     if (!project) return <div>Not found</div>
     return <>
-        <div className="bg-foregroundLight rounded-md flex flex-col gap-4 p-4">
+        <div className="page bg-foregroundLight rounded-lg">
             <div className="flex gap-2 justify-between items-start">
                 <h2 className="text-xl lg:text-2xl font-semibold">{project.project_name}</h2>
-                {withBackButton && <button className="ml-auto focus:text-primary dark:focus:text-[inherit] border hover:border-primary dark:hover:border-foregroundDark focus:border-transparent dark:focus:border-transparent focus:shadow-glow p-1 rounded-lg overflow-hidden" onClick={()=>router.back()}>
+                {withBackButton && <button className="ml-auto focus:text-primary dark:focus:text-[inherit] box-shadow-glow p-1 rounded-lg overflow-hidden" onClick={()=>router.back()}>
                     <IoMdClose className="w-6 h-6 lg:w-7 lg:h-7"/>
                 </button>}
             </div>
@@ -28,7 +28,7 @@ export const ProjectDetails = ({withBackButton}: { withBackButton?: boolean }) =
                 </Fragment>)}
             </div>
             <div className="flex gap-2 flex-wrap text-sm">
-                {project.tags.map((tag, j) => <span key={`tag-${j}`} className="px-2 py-0.5 border rounded-full">{tag}</span>)}
+                {project.tags.map((tag, j) => <span key={`tag-${j}`} className="px-2 py-0.5 bg-grayLight rounded-full">{tag}</span>)}
             </div>
             <p>{project.desc}</p>
 

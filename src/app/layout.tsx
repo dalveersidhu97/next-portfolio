@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     default: `${MY_DATA.name} | Full Stack Web Developer`,
   },
   description: MY_DATA.about.about_me,
+  keywords: [`${MY_DATA.name}`, `${MY_DATA.name} Lohakhera`, `${MY_DATA.name} Sidhu`, 'Laddi Sidhu', 'Laddi Sidhu Lohakhera', `Lohakera`, 'Sangrur', 'Punjab'],
+  authors: [{ name: `${MY_DATA.name}` }],
+  creator: `${MY_DATA.name}`,
+  publisher: `${MY_DATA.name}`,
 }
 
 export default function RootLayout({
