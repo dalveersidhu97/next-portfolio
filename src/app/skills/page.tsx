@@ -1,5 +1,10 @@
 import { MY_DATA } from "@/db/data";
+import { Metadata } from "next";
 import { Fragment } from "react";
+
+export const metadata: Metadata = {
+  title: 'Skills',
+}
 
 export default function SkillsPage() {
 

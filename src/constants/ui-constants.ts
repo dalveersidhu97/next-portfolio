@@ -1,2 +1,3 @@
 export const ANIMATION_DURATION_SHORT = 100;
 export const ANIMATION_DURATION_LONG = 300;
+export const COLOR_PRIMARY = '#0284c7';

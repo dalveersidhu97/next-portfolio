@@ -19,7 +19,7 @@ const SideBar = () => {
                 <div className='bg-primaryLight2 dark:bg-primaryLight px-2 py-1 rounded-md text-center'>
                     {MY_DATA.role}
                 </div>
-                <button className='hover:opacity-70 px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 box-shadow-glow bg-primary text-white dark:text-foregroundDark'>
+                <button className='hover:opacity-75 px-2 py-1 rounded-md text-center flex justify-center items-center gap-2 box-shadow-glow bg-primaryLight2 dark:bg-primaryLight text-primary dark:text-foregroundDark'>
                     <IoMdCloudDownload className="w-5 h-5"/>
                     Download Resume
                 </button>
@@ -74,7 +74,7 @@ export const SideBarMobile = ({ visibilityState }: { visibilityState: [boolean, 
 
 export const SideBarPC = () => {
     return (
-        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-lg overflow-auto shadow-[0px_0px_5px_rgba(0,0,0,.2)] dark:shadow-[0px_0px_5px_rgba(255,255,255,.8)]'>
+        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-lg overflow-auto shadow-card'>
             <SideBar></SideBar>
         </div>
     );

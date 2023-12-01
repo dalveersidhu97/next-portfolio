@@ -1,6 +1,12 @@
 import { MY_DATA } from "@/db/data";
+import { Metadata } from "next";
 import { Fragment } from "react";
 import { IoMdCloudDownload } from "react-icons/io";
+
+export const metadata: Metadata = {
+  title: 'Qualification',
+  description: MY_DATA.education.summary
+}
 
 export default function EducationPage() {
   return (
