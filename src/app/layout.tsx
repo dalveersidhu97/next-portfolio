@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   publisher: `${MY_DATA.name}`,
   openGraph: {
     url: new URL(BASE_URL)
+  },
+  verification: {
+    google: 'jARzHWhhOylvyDqNPf85DtuxOIhttYS3xA1KkyzJEo0'
   }
 }
 
