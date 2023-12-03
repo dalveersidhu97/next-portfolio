@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   authors: [{ name: `${MY_DATA.name}` }],
   creator: `${MY_DATA.name}`,
   publisher: `${MY_DATA.name}`,
+  openGraph: {
+    url: new URL(BASE_URL)
+  }
 }
 
 export default function RootLayout({
