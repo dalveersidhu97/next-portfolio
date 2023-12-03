@@ -145,7 +145,7 @@ export const MY_DATA = {
                     ],
                     links: [
                         { label: 'Github', url: 'https://github.com/dalveersidhu97/assigndaku', icon: '' },
-                        { label: 'Deployed', url: 'https://assigndaku.com/', icon: '' }
+                        { label: 'Deployed', url: 'https://assigndaku.vercel.app/', icon: '' }
                     ],
                     tags: ['Node.js', 'Next.js', 'React.js', 'Redux.js', 'Typescript', 'Mongoose', 'TailwindCSS', 'HTML5 & CSS3']
                 },
