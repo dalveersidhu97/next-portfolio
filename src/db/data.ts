@@ -141,9 +141,7 @@ export const MY_DATA = {
                     desc: 'Utilized My Own SMS API, Typescript, Next.js, Custom Express Server, React.js, Mongoose, Strip Payments, TailwindCSS. Here I help others with programming bugs, assignments, and projects. I control user requests through my admin panel. This domain directly accesses my computer IP, so it may not open if my computer is turned off.',
                     images: [
                         { src: '/images/assigndaku.jpg', alt: 'Assigndaku' },
-                        { src: '/images/web_project.jpg', alt: 'Web project' },
                         { src: '/images/assigndaku.jpg', alt: 'Assigndaku' },
-                        { src: '/images/web_project.jpg', alt: 'Web project' }
                     ],
                     links: [
                         { label: 'Github', url: 'https://github.com/dalveersidhu97/assigndaku', icon: '' },
@@ -161,6 +159,39 @@ export const MY_DATA = {
                         { label: 'Deployed', url: 'http://desicart.000webhostapp.com/', icon: '' }
                     ],
                     tags: ['HTML5', 'CSS3', 'Javascript']
+                },
+                {
+                    project_name: 'Project Management System',
+                    slug: 'project-management-system',
+                    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veniam sequi unde ducimus voluptas ab perspiciatis labore. Reiciendis iste, officiis, consequuntur perspiciatis id rem, voluptatem corporis ipsa ea cumque pariatur.',
+                    images: [{ src: '/images/springmvc_project.jpg', alt: 'Spring MVC Project' }, { src: '/images/springmvc_project.jpg', alt: 'Spring MVC Project' }],
+                    links: [
+                        { label: 'Github', url: 'https://github.com/dalveersidhu97/final-project-node', icon: '' },
+                        { label: 'Deployed', url: 'https://www.dalveersidhu.com', icon: '' }
+                    ],
+                    tags: ['Node.js', 'Express.js', 'EJS View Engine', 'Mongoose', 'Bootstrap', 'Javascript']
+                },
+                {
+                    project_name: 'Portfolio Website',
+                    slug: 'portfolio-website-project',
+                    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veniam sequi unde ducimus voluptas ab perspiciatis labore. Reiciendis iste, officiis, consequuntur perspiciatis id rem, voluptatem corporis ipsa ea cumque pariatur.',
+                    images: [{ src: '/images/portfolio_project.jpg', alt: 'Portfolio project' }, { src: '/images/portfolio_project.jpg', alt: 'Portfolio project' }],
+                    links: [
+                        { label: 'Github', url: 'https://github.com/dalveersidhu97/portfolio', icon: '' },
+                        { label: 'Deployed', url: 'https://www.dalveersidhu.com', icon: '' }
+                    ],
+                    tags: ['Node.js', 'Express.js', 'Next.js', 'React.js', 'Javascript', 'Typescript', 'TailwindCSS', 'Redux.js', 'Postgres', 'Sequelize']
+                },
+                {
+                    project_name: 'Next Quiz Web App',
+                    slug: 'next-quiz-app',
+                    desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veniam sequi unde ducimus voluptas ab perspiciatis labore. Reiciendis iste, officiis, consequuntur perspiciatis id rem, voluptatem corporis ipsa ea cumque pariatur.',
+                    images: [{ src: '/images/nexts_quiz_project.jpg', alt: 'Quiz project' }, { src: '/images/nexts_quiz_project.jpg', alt: 'Quiz project' }],
+                    links: [
+                        { label: 'Github', url: 'https://github.com/dalveersidhu97/NextJs-Quiz-App', icon: '' },
+                        { label: 'Deployed', url: 'https://next-js-quiz-app.vercel.app/', icon: '' }
+                    ],
+                    tags: ['Node.js', 'Express.js', 'Next.js', 'React.js', 'Javascript', 'Typescript', 'REST API', 'HTML5 & CSS3', 'TailwindCSS', 'Redux.js', 'Postgres', 'Sequelize']
                 }
             ]
         },

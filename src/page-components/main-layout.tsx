@@ -9,14 +9,14 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
 
     return (
 
-        <div className='w-full h-[100dvh] overflow-hidden lg:p-10 relative dark:bg-black text-foregroundDark'>
-            <div className='overflow-auto h-full w-full max-w-[85rem] lg:m-auto flex items-start lg:gap-6 lg:p-4'>
+        <div className='w-full h-[100dvh] overflow-hidden relative dark:bg-black text-foregroundDark'>
+            <div className='overflow-auto h-full w-full lg:m-auto flex items-start'>
                 <SideBarPC></SideBarPC>
-                <div className='flex flex-col w-full h-full overflow-auto shadow-card lg:rounded-xl'>
+                <div className='flex flex-col w-full h-full overflow-auto'>
                     <TopBar></TopBar>
                     <div className='flex flex-col w-full h-full overflow-auto lg:relative'>
                         <MainNav></MainNav>
-                        <div className='flex-grow overflow-y-auto overflow-x-hidden pb-20'>
+                        <div className='flex-grow overflow-x-auto pb-20'>
                             {children}
                         </div>
                     </div>

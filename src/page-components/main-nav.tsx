@@ -39,7 +39,7 @@ const MainNav = () => {
     const pathname = usePathname();
 
     return (
-        <div className={`p-4 gap-4 text-lg text-primary hidden lg:flex dark:bg-primaryLight2 dark:text-foregroundDark`}>
+        <div className={`p-4 gap-4 text-lg text-primary hidden lg:flex dark:bg-primaryLight2 dark:text-foregroundDark w-full bg-foregroundLight`}>
             {navLinks.map((navLink, i) => <Fragment key={`navLink-${i}`}>
                 <Link href={navLink.path} className={`${pathname === navLink.path ? `bg-primaryLight` : 'hover:bg-primaryLight'} box-shadow-glow py-1 px-3 rounded-md flex gap-2 items-center`}>
                     <navLink.Icon className="w-6 h-6" />

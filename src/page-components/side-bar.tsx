@@ -75,7 +75,7 @@ export const SideBarMobile = ({ visibilityState }: { visibilityState: [boolean, 
 
 export const SideBarPC = () => {
     return (
-        <div className='lg:block hidden min-w-max max-w-fit h-full rounded-xl overflow-auto shadow-card'>
+        <div className='lg:block hidden min-w-max max-w-fit h-full overflow-auto'>
             <SideBar></SideBar>
         </div>
     );
