@@ -28,7 +28,7 @@ export const LightModes = () => {
             </button>
 
             {<Transition nodeRef={dropdownRef} in={dropdownVisible} unmountOnExit timeout={100}>
-                {(state) => <div className="absolute top-full right-0 pt-2 pr-1">
+                {(state) => <div className="absolute top-full right-0 pt-2 pr-1 z-50">
                     <div
                         ref={dropdownRef}
                         style={{ transitionDuration: `${ANIMATION_DURATION_SHORT}ms` }}
